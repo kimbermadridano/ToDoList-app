@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      To Do List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label>Type Here</ion-label>
+  <ion-input [(ngModel)]="info"> </ion-input>
+	  <button ion-button (click)="Add()">Add</button>
+	  	<ion-list *ngFor="let item of array"> 
+	 		<ion-item>{{item}}
+	 			
+	 			<button ion-button color="danger" (click)="Delete(item)">Delete
+	 			</button>
+	 			
+	 			<button ion-button color="secondary" (click)="Edit(item)">Edit
+	 			</button>
+
+	 	</ion-item>	
+	  </ion-list>
+</ion-content>
